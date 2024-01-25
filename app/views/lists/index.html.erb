@@ -1,0 +1,32 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/3418/3418886.png"/>
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./lists/new">Add a List</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/947659542/es/foto/carretes-de-pel%C3%ADcula-de-8mm-vintage-de-pel%C3%ADculas-historia-y-recuerdos.jpg?s=612x612&w=0&k=20&c=y04oc0u7uxmwS87LqLOru2Uq79dY5aGIaQ0_6lhLUlc=);">
+  <h1>PopCorn Time</h1>
+</div>
+
+<div class ="list-group">
+  <ul>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list)%>
+      </li>
+    <% end %>
+  </ul>
+</div>

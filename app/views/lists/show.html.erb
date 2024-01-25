@@ -1,0 +1,14 @@
+<h1><%= @list.name %> List</h1>
+
+<ul>
+<% @list.bookmarks.each do |bookmark| %>
+  <li>
+    <%= bookmark.movie.title %>
+    <i class="fa-solid fa-trash-can"></i>
+  </li>
+<% end %>
+</ul>
+
+<button class="btn btn-primary"><%= link_to "Add Movies", new_list_bookmark_path(@list)%></button>
+
+<button class="btn btn-primary"><%= link_to "Go back to your lists", lists_path%></button>
