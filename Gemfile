@@ -2,6 +2,21 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# Bootstrap
+gem "bootstrap", "~> 5.2"
+
+# AutoPrefixer
+gem "autoprefixer-rails"
+
+# Font Awesome
+gem "font-awesome-sass", "~> 6.1"
+
+# Simple Form
+gem "simple_form"
+
+# SCSS
+gem "sassc-rails"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
