@@ -1,13 +1,17 @@
-<h1><%= @list.name %> List</h1>
+<h3><%= @list.name %> List</h3>
 
-<ul>
-<% @list.bookmarks.each do |bookmark| %>
-  <li>
-    <%= bookmark.movie.title %>
-    <i class="fa-solid fa-trash-can"></i>
-  </li>
-<% end %>
-</ul>
+<div class = "cards">
+  <% if @list.bookmarks.empty?%>
+    <p>No movies in this list<p>
+  <% else %>
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class = "card-category" style="background-image: url(<%=bookmark.movie.poster_url%>)">
+        <%= bookmark.movie.title %>
+        <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 
 <button class="btn btn-primary"><%= link_to "Add Movies", new_list_bookmark_path(@list)%></button>
 
