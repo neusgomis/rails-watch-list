@@ -9,7 +9,11 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
     @bookmark.list = @list
     @bookmark.save
-    redirect_to list_path(@list)
+    if @bookmark.save
+      redirect_to list_path(@list), notice: 'Movie was added'
+    else
+      render :new
+    end
   end
 
   def destroy

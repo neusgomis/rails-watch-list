@@ -2,6 +2,11 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# Open-uri
+gem 'open-uri'
+
+# Json
+gem 'json'
 # Cloudinary
 gem "cloudinary"
 

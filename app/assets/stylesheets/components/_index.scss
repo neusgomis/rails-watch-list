@@ -3,3 +3,9 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+
+.main-content {
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 70px;
+}

@@ -2,6 +2,12 @@ h3 {
   text-align:center;
 }
 
+.remove  {
+  position: fixed;
+  top: 0;
+}
+
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,6 +28,7 @@ h3 {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .card-category a {
